@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Aclonica", sans-serif;
+}
+#seccionComponentes {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  #seccionComponentes {
+    padding: 30px 150px 30px 150px;
+  }
+}
+/* #viewHome{
+  animation: jackInTheBox;
+  animation-duration: 2s;
+} */
+#detallesBateria{
+  display: none;
+}

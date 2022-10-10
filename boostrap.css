@@ -1,0 +1,24 @@
+.nav {
+  --bs-nav-link-color: #50e5ff;
+  --bs-nav-link-hover-color: #e0faff;
+}
+.form-control {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+.card-title {
+  color: #ff5050;
+  font-weight: bold;
+}
+.card-text {
+  color: #5555557c;
+  font-style: italic;
+}
+.nav-link{
+  cursor: pointer;
+}
+.card{
+  cursor: pointer;
+  --bs-card-bg: #ffffffa8;
+}

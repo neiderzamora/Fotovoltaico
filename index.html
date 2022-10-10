@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="images/icon.png" />
+    <title>Sistema Fotovoltaico</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Oxygen+Mono&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+    <link href="boostrap.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">
+            <i class="fa-solid fa-solar-panel"></i> Sistema Fotovoltaico
+          </h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link" id="inicio" onclick="inicio()">Inicio</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contacto</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <!-- Captura de datos -->
+        <form id="viewHome" name="datosForm" style="display: block">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Total Vatios</label
+            >
+            <input
+              name="vatiosTotal"
+              type="number"
+              class="form-control animate__animated animate__slideInRight"
+              id="vTotal"
+              placeholder="Digite cantidad"
+              aria-describedby="ayudaVatio" />
+            <div id="ayudaVatio" class="form-text">
+              Calcule el consumo total de los aparatos electronicos a usar.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Total Vatios/dia</label
+            >
+            <input
+              name="vatiosDia"
+              type="number"
+              class="form-control animate__animated animate__slideInRight"
+              id="v/dia"
+              placeholder="Digite cantidad" />
+          </div>
+          <button type="button" class="btn btn-danger" onclick="calcVatios()">
+            Calcular
+          </button>
+        </form>
+
+        <!-- Seccion Componentes -->
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="seccionComponentes">
+          <div class="col" onclick="detallesBateria()">
+            <div class="card">
+              <img src="./images/baterias.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Baterias</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar las baterias que recomendamos
+                  para su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesModulos()">
+            <div class="card">
+              <img src="./images/modulos.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Modulos Fotovoltaicos</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar los modulos que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesInversor()">
+            <div class="card">
+              <img src="./images/inversor.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Inversor</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar el inversor que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesControlador()">
+            <div class="card">
+              <img
+                src="./images/controlador.jpg"
+                class="card-img-top"
+                alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Controlador</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar el controlador que recomendamos
+                  para su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detalles Baterias -->
+<!--         <div id="detallesBateria">
+          <div
+            class="row row-cols-1 row-cols-md-2 g-2"
+            style="padding: 30px 150px 30px 150px">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Baterias en paralelo</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Baterias en serie</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p><a class="btn btn-secondary" href="#">Ver detalles de la bateria <i class="fa-solid fa-angles-right"></i></a></p>
+        </div> -->
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <p>
+          Proyecto de Curso
+          <a href="#" class="text-white">Sistema Fotovoltaico</a>, by
+          <a href="#" class="text-white">Neider Zamora | Daniela Triana</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/3d89b02409.js"
+      crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+    <script src="modulos.js"></script>
+    <script src="baterias.js"></script>
+  </body>
+</html>
