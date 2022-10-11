@@ -18,15 +18,15 @@
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous" />
-    <link href="boostrap.css" rel="stylesheet" type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="./file-css/boostrap.css" rel="stylesheet" type="text/css" />
+    <link href="./file-css/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="d-flex h-100 text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
         <div>
-          <h3 class="float-md-start mb-0">
+          <h3 class="float-md-start mb-0 ">
             <i class="fa-solid fa-solar-panel"></i> Sistema Fotovoltaico
           </h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -39,37 +39,29 @@
 
       <main class="px-3">
         <!-- Captura de datos -->
-        <form id="viewHome" name="datosForm" style="display: block">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Total Vatios</label
-            >
-            <input
-              name="vatiosTotal"
-              type="number"
-              class="form-control animate__animated animate__slideInRight"
-              id="vTotal"
-              placeholder="Digite cantidad"
-              aria-describedby="ayudaVatio" />
-            <div id="ayudaVatio" class="form-text">
-              Calcule el consumo total de los aparatos electronicos a usar.
+        <div class="px-4 py-5 my-5 text-center" id="viewHome">
+          <h1 class="display-5 fw-bold animate__animated animate__pulse" style="color: #50e5ff">Bienvenido</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+              Un sistema fotovoltaico, también sistema FV o sistema de energía
+              solar, es un sistema de energía diseñado para suministrar energía
+              solar utilizable por medio de la energía fotovoltaica.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button
+                type="button"
+                class="btn btn-light btn-lg px-4 gap-3"
+                onclick="empezar()">
+                Comenzar
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-warning btn-lg px-4" onclick="advertencia()">
+                Advertencia
+              </button>
             </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Total Vatios/dia</label
-            >
-            <input
-              name="vatiosDia"
-              type="number"
-              class="form-control animate__animated animate__slideInRight"
-              id="v/dia"
-              placeholder="Digite cantidad" />
-          </div>
-          <button type="button" class="btn btn-danger" onclick="calcVatios()">
-            Calcular
-          </button>
-        </form>
+        </div>
 
         <!-- Seccion Componentes -->
         <div class="row row-cols-1 row-cols-md-2 g-4" id="seccionComponentes">
@@ -125,39 +117,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Detalles Baterias -->
-<!--         <div id="detallesBateria">
-          <div
-            class="row row-cols-1 row-cols-md-2 g-2"
-            style="padding: 30px 150px 30px 150px">
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Baterias en paralelo</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Baterias en serie</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p><a class="btn btn-secondary" href="#">Ver detalles de la bateria <i class="fa-solid fa-angles-right"></i></a></p>
-        </div> -->
       </main>
 
       <footer class="mt-auto text-white-50">
@@ -173,8 +132,9 @@
       src="https://kit.fontawesome.com/3d89b02409.js"
       crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="main.js"></script>
-    <script src="modulos.js"></script>
-    <script src="baterias.js"></script>
+    <script src="./file-js/baterias.js"></script>
+    <script src="./file-js/main.js"></script>
+    <script src="./file-js/modulos.js"></script>
+    <script src="./file-js/detalles-elementos.js"></script>
   </body>
 </html>
