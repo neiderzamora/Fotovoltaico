@@ -12,7 +12,7 @@ function detallesBateria() {
         "<br>" +
         "<a href='" +
         verMas.bateria +
-        "' target='_blank' type='button' class='btn btn-warning' style='color: #545454;'>Ver mas</a></div>",
+        "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver mas</a></div>",
     });
   }
   function detallesModulos() {
@@ -29,7 +29,7 @@ function detallesBateria() {
         "<br>" +
         "<a href='" +
         verMas.modulo +
-        "' target='_blank' type='button' class='btn btn-warning' style='color: #545454;'>Ver mas</a></div>",
+        "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver mas</a></div>",
     });
   }
   function detallesInversor() {
@@ -40,7 +40,7 @@ function detallesBateria() {
         "<p style='text-align:center;font-size:1rem'>El Inversor que más se adapta a su consumo ingresado es el siguiente:</p>" +
         "<a href='" +
         verMas.inversor +
-        "' target='_blank' type='button' class='btn btn-warning' style='color: #545454;'>Ver mas</a></div>",
+        "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver mas</a></div>",
     });
   }
   function detallesControlador() {
@@ -51,6 +51,6 @@ function detallesBateria() {
         "<p style='text-align:center;font-size:1rem'>El controlador que más se adapta a su consumo ingresado es el siguiente: </p>" +
         "<a href='" +
         verMas.controlador +
-        "' target='_blank' type='button' class='btn btn-warning' style='color: #545454;'>Ver Aqui</a></div>",
+        "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver Aqui</a></div>",
     });
   }

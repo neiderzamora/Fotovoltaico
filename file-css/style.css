@@ -20,3 +20,4 @@ body {
 #detallesBateria{
   display: none;
 }
+.swal2-styled.swal2-confirm{display:none !important;}
