@@ -99,6 +99,6 @@ function advertencia() {
       "<div><h1 style='color:#e06666;font-weight:bold;text-align:center;animation:pulse;animation-duration:2s;'><i class='fa-solid fa-circle-exclamation'></i> Advertencia</h1>" +
       "<hr class='featurette-divider'>" +
       "<ul style='text-align:center;margin:0;padding:0;'><li>El consumo diario no puede excederse de 15.000Wh</li><li>Segun el consumo de su sistema varia el voltaje para el sistema<span>" +
-      "<table class='table'><thead class='table-dark'><tr><th>24v</th><th>36v</th><th>48v</th></thead><tbody><td class='table-warning'>1-2000(Wh)</td><td class='table-warning'>2000-4000(Wh)</td><td class='table-warning'>4001+(Wh)</td></tbody></table></span></li></ul><br></div>",
+      "<table class='table'><thead class='table-dark'><tr><th>12v</th><th>24v</th><th>48v</th></thead><tbody><td class='table-warning'>1-2000(Wh)</td><td class='table-warning'>2000-4000(Wh)</td><td class='table-warning'>4001+(Wh)</td></tbody></table></span></li></ul><br></div>",
   });
 }
