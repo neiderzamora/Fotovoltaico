@@ -187,7 +187,7 @@ function showBag() {
 function limiteExcedido() {
   Swal.fire({
     allowOutsideClick: false,
-    title: "Limite excedido",
+    title: "Algo ha salido mal",
     icon: "error",
     html: `
     <button type='button' class='btn btn-danger' style='color: #fff;' onclick='inicio(), Swal.close()'>Reintentar</button>

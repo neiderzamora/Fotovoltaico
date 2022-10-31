@@ -15,7 +15,7 @@ function calcHibrido() {
     a: 50,
   };
 
-  if (potenciaFV <= 2000) {
+  if ((potenciaFV <= 2000) & (potenciaFV > 1)) {
     inversor = {
       eficiencia: 0.91,
       voltaje: 48,

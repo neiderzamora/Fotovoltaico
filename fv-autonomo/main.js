@@ -6,7 +6,7 @@ function calcAutonomo() {
   demandaMax = consumoDP * 0.25 + consumoDP;
   potenciaFV = demandaMax / horaSolar;
 
-  if (demandaMax <= 2000) {
+  if ((demandaMax <= 2000) & (demandaMax > 1)) {
     volSistm = 12;
     eficienciaInversor = 0.93;
     modulo = {

@@ -3,7 +3,7 @@ function calcInterconectado() {
   demandaMax = demandaMax * 0.25 + demandaMax;
   potenciaFV = demandaMax / horaSolar;
 
-  if (potenciaFV <= 6000) {
+  if ((potenciaFV <= 6000) & (potenciaFV > 1)) {
     inversor = {
       eficiencia: 0.91,
       voltaje: 48,

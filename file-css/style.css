@@ -1,10 +1,10 @@
 @font-face {
-  font-family: LemonLove;
-  src: url(./Lemon-Love.ttf);
+  font-family: "LemonLove";
+  src: url("./Lemon-Love.ttf");
 }
 @font-face {
-  font-family: Banana-Pastry;
-  src: url(./Banana-Pastry.ttf);
+  font-family: "Banana-Pastry";
+  src: url("./Banana-Pastry.ttf");
 }
 @font-face {
   font-family: Grimroar;
