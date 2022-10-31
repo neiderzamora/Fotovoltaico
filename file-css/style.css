@@ -1,23 +1,54 @@
+@font-face {
+  font-family: LemonLove;
+  src: url(./Lemon-Love.ttf);
+}
+@font-face {
+  font-family: Banana-Pastry;
+  src: url(./Banana-Pastry.ttf);
+}
+@font-face {
+  font-family: Grimroar;
+  src: url(./Grimroar.ttf);
+}
 html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Aclonica", sans-serif;
+  font-family: LemonLove;
 }
-#seccionComponentes {
+h1 {
+  animation: infinite;
+}
+#autonomo {
   display: none;
+}
+#hibrido {
+  display: none;
+}
+#interconectado {
+  display: none;
+}
+.swal2-styled.swal2-confirm {
+  display: none !important;
+}
+.container-main {
+  font-family: Banana-Pastry;
+}
+.logo {
+  font-family: Grimroar;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #50e5ff;
+}
+option {
+  font-weight: bold;
+}
+.nav-link:hover {
+  border-bottom: outset;
 }
 
 @media screen and (min-width: 767px) {
-  #seccionComponentes {
+  #autonomo {
     padding: 30px 150px 30px 150px;
   }
 }
-/* #viewHome{
-  animation: jackInTheBox;
-  animation-duration: 2s;
-} */
-#detallesBateria{
-  display: none;
-}
-.swal2-styled.swal2-confirm{display:none !important;}
+

@@ -3,16 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="images/icon.png" />
+    <link rel="icon" href="./images/solarIcon.png" />
     <title>Sistema Fotovoltaico</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Oxygen+Mono&display=swap"
-      rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,12 +21,11 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
         <div>
-          <h3 class="float-md-start mb-0 ">
+          <h3 class="float-md-start mb-0 logo">
             <i class="fa-solid fa-solar-panel"></i> Sistema Fotovoltaico
           </h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link" id="inicio" onclick="inicio()">Inicio</a>
-            <a class="nav-link" href="#">Features</a>
             <a class="nav-link" href="#">Contacto</a>
           </nav>
         </div>
@@ -40,9 +34,12 @@
       <main class="px-3">
         <!-- Captura de datos -->
         <div class="px-4 py-5 my-5 text-center" id="viewHome">
-          <h1 class="display-5 fw-bold animate__animated animate__pulse" style="color: #50e5ff">Bienvenido</h1>
+          <h1
+            class="display-5 fw-bold container-main title animate__animated animate__pulse">
+            Bienvenido
+          </h1>
           <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4">
+            <p class="lead mb-4 container-main">
               Un sistema fotovoltaico, también sistema FV o sistema de energía
               solar, es un sistema de energía diseñado para suministrar energía
               solar utilizable por medio de la energía fotovoltaica.
@@ -50,21 +47,28 @@
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <button
                 type="button"
-                class="btn btn-light btn-lg px-4 gap-3"
-                onclick="empezar()">
-                Comenzar
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-warning btn-lg px-4" onclick="advertencia()">
+                class="btn btn-outline-info btn-lg px-4"
+                onclick="advertencia()">
+                <i class="fa-solid fa-circle-exclamation"></i>
                 Advertencia
               </button>
+              <select
+                class="form-select btn btn-dark btn-lg px-4"
+                aria-label="Default select example"
+                id="fvSelector">
+                <option selected>Seleccione un FV</option>
+                <option value="1">FV Hibrido</option>
+                <option value="2">FV Autonomo</option>
+                <option value="3">FV Interconectado</option>
+              </select>
             </div>
           </div>
         </div>
 
-        <!-- Seccion Componentes -->
-        <div class="row row-cols-1 row-cols-md-2 g-4" id="seccionComponentes">
+        <!-- Seccion Componentes fv autonomo -->
+        <div
+          class="row row-cols-1 row-cols-md-2 g-4 animate__animated animate__zoomIn"
+          id="autonomo">
           <div class="col" onclick="detallesBateria()">
             <div class="card">
               <img src="./images/baterias.jpg" class="card-img-top" alt="..." />
@@ -117,6 +121,78 @@
             </div>
           </div>
         </div>
+
+        <!-- Seccion Componentes fv hibrido -->
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 animate__animated animate__zoomIn"
+          id="hibrido">
+          <div class="col" onclick="detallesBateriaH()">
+            <div class="card">
+              <img src="./images/baterias.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Baterias</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar las baterias que recomendamos
+                  para su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesModulosH()">
+            <div class="card">
+              <img src="./images/modulos.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Modulos Fotovoltaicos</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar los modulos que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesInversorH()">
+            <div class="card">
+              <img src="./images/inversor.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Inversor</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar el inversor que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seccion Componentes fv interconectado -->
+        <div
+          class="row row-cols-1 row-cols-md-2 g-4 animate__animated animate__zoomIn"
+          id="interconectado">
+          <div class="col" onclick="detallesModulosI()">
+            <div class="card">
+              <img src="./images/modulos.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Modulos Fotovoltaicos</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar los modulos que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" onclick="detallesInversorI()">
+            <div class="card">
+              <img src="./images/inversor.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Inversor</h5>
+                <p class="card-text">
+                  Ingrese aqui para visualizar el inversor que recomendamos para
+                  su sistema.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer class="mt-auto text-white-50">
@@ -131,10 +207,18 @@
     <script
       src="https://kit.fontawesome.com/3d89b02409.js"
       crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./file-js/baterias.js"></script>
-    <script src="./file-js/main.js"></script>
-    <script src="./file-js/modulos.js"></script>
-    <script src="./file-js/detalles-elementos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./fv-autonomo/baterias.js"></script>
+    <script src="./fv-autonomo/main.js"></script>
+    <script src="./fv-autonomo/modulos.js"></script>
+    <script src="./fv-autonomo/detalles-elementos.js"></script>
+    <script src="./fv-hibrido/main.js"></script>
+    <script src="./fv-hibrido/modulos.js"></script>
+    <script src="./fv-hibrido/detalles-elementos.js"></script>
+    <script src="./fv-hibrido/baterias.js"></script>
+    <script src="./fv-interconectado/detalles-elementos.js"></script>
+    <script src="./fv-interconectado/main.js"></script>
+    <script src="./fv-interconectado/modulos.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
