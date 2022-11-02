@@ -11,3 +11,4 @@ function calcModulosH() {
     serieModulo = Math.round(numModulo / inversor.mppt);
   }
 }
+ 

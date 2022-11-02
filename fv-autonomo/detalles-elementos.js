@@ -34,7 +34,7 @@ function detallesModulos() {
       "</span></li><li>Modulos en paralelo: <span style='color:#dc3545'>" +
       paraleloModulo +
       "</span></li><li>Modulos en serie: <span style='color:#dc3545'>" +
-      seriesModulo +
+      serieModulo +
       "</span></li></ul>" +
       "<br>" +
       "<a href='" +
@@ -65,8 +65,11 @@ function detallesControlador() {
       "<div><h1 style='color:#dc3545;font-weight:bold;text-align:center;'>Detalles Controlador</h1>" +
       "<hr class='featurette-divider'>" +
       "<p style='text-align:center;font-size:1rem'>El controlador que más se adapta a su consumo ingresado es el siguiente: </p>" +
-      "<a href='" +
+      "<div class='d-grid gap-2 d-sm-flex justify-content-sm-center'><a href='" +
       verMas.controlador +
-      "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver Detalles</a></div>",
+      "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver Detalles</a>" +
+      "<a href='" +
+      verMas.manualC +
+      "' target='_blank' type='button' class='btn btn-dark' style='color: #fff;'>Ver Manual</a></div></div>",
   });
 }

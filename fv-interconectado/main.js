@@ -18,7 +18,7 @@ function calcInterconectado() {
       modulo: "https://autosolar.co/pdf/panel-solar-jasolar-PERC-380W.pdf",
       inversor: "https://autosolar.co/pdf/3004270-SPH3000-6000TL-BL-US.pdf",
     };
-  } else if ((potenciaFV <= 15000) & (potenciaFV > 6001)) {
+  } else if ((potenciaFV <= 11000) & (potenciaFV > 6001)) {
     inversor = {
       eficiencia: 0.92,
       voltaje: 48,

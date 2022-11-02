@@ -1,5 +1,5 @@
 function calculoBaterias() {
-  consumoBateriaDia = consumoDP / eficienciaInversor / volSistm;
+  consumoBateriaDia = demandaMax / eficienciaInversor / volSistm;
   bateriasParalelo = Math.round(
     (consumoBateriaDia * bateria.diasAutonomia) /
       bateria.profundidadDescarga /

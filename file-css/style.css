@@ -45,10 +45,12 @@ option {
 .nav-link:hover {
   border-bottom: outset;
 }
+ul {
+  list-style: none;
+}
 
 @media screen and (min-width: 767px) {
   #autonomo {
     padding: 30px 150px 30px 150px;
   }
 }
-

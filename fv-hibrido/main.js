@@ -29,7 +29,9 @@ function calcHibrido() {
     verMas = {
       bateria: "https://autosolar.es/pdf/Pylontech-PowerCube-HV-manual.pdf",
       modulo: "https://autosolar.co/pdf/panel-solar-jasolar-PERC-380W.pdf",
-      inversor: "https://autosolar.co/pdf/AXPERT-1-2KW-MKS-MKS-PLUS-120V.pdf",
+      inversor: "https://autosolar.co/pdf/InfiniSolar-10kW-Trif%C3%A1sico.pdf",
+      inversorM:
+        "https://www.solartex.co/tienda/wp-content/uploads/2019/08/InfiniSolar-2KW-3KW-manual.pdf",
     };
   } else if ((potenciaFV <= 4000) & (potenciaFV > 2001)) {
     inversor = {
@@ -45,7 +47,9 @@ function calcHibrido() {
     verMas = {
       bateria: "https://autosolar.es/pdf/Pylontech-PowerCube-HV-manual.pdf",
       modulo: "https://autosolar.co/pdf/panel-solar-jasolar-PERC-380W.pdf",
-      inversor: "https://autosolar.co/pdf/Ficha-Voltronic-Axpert-VMIII.pdf",
+      inversor: "https://autosolar.co/pdf/InfiniSolar-10kW-Trif%C3%A1sico.pdf",
+      inversorM:
+        "https://campusuccedu-my.sharepoint.com/:b:/g/personal/neider_zamora_campusucc_edu_co/ESLhARgyw8xFhAlkUsfUsjYBdA-RPA7DY2XbkozchdCsnQ?e=olW80U",
     };
   } else if ((potenciaFV <= 11000) & (potenciaFV > 4001)) {
     inversor = {
@@ -62,11 +66,13 @@ function calcHibrido() {
       bateria: "https://autosolar.es/pdf/Pylontech-PowerCube-HV-manual.pdf",
       modulo: "https://autosolar.co/pdf/panel-solar-jasolar-PERC-380W.pdf",
       inversor: "https://autosolar.co/pdf/InfiniSolar-10kW-Trif%C3%A1sico.pdf",
+      inversorM:
+        "https://campusuccedu-my.sharepoint.com/:b:/g/personal/neider_zamora_campusucc_edu_co/ESkxSukfiGpAldT7fCiJyBIBYKY9HQ6gKXgzwjdFHh9X0w?e=HiH4sF",
     };
   } else {
     limiteExcedido();
   }
-  if (cargaCritica >= 13750) {
+  if (cargaCritica >= 6626) {
     limiteExcedido();
   }
   calcModulosH();

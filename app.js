@@ -3,6 +3,7 @@ let verMas = {};
 let modulo = {};
 let bateria = {};
 let inversor = {};
+let controlador = {};
 
 /* Baterias */
 let consumoBateriaDia;
